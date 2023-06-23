@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="ISO-8859-1" />
+    <title>:::: Cadastro de aluno ::::</title>
+  </head>
+  <body>
+	  <div class="topo">
+		  <div class="col">
+		  <a href="home.html">
+			  <img src="imagens/homeicon.png" alt="home" width="80" > 
+		  </a>	
+		  </div>
+	  </div>
+	  
+    <div class="centro">
+      <form  action="/ControleAluno" method="post">
+        <legend class="text-center mb-4">Cadastro de aluno</legend>
+        <div class="row mt-2">
+          <div class="col">
+            <label for="txtAluno">Nome:</label>
+          </div>
+          <div class="col">
+            <input class="form-control" type="text" id="txtAluno" name="txtAluno" />
+          </div>
+        </div>
+
+        <div class="row mt-2">
+          <div class="col">
+            <label for="txtCPF">CPF:</label>
+          </div>
+          <div class="col">
+            <input class="form-control" type="text" id="txtCPF" name="txtCPF" />
+          </div>
+        </div>
+
+        <div class="row mt-2">
+          <div class="col">
+            <label for="txtLogradouro">Logradouro:</label>
+          </div>
+          <div class="col">
+            <input class="form-control" type="text" id="txtLogradouro" name="txtLogradouro" />
+          </div>
+        </div>
+
+        <div class="row mt-2">
+          <div class="col">
+            <label for="txtNumero">Numero:</label>
+          </div>
+          <div class="col">
+            <input class="form-control" type="text" id="txtNumero" name="txtNumero" />
+          </div>
+        </div>
+
+        <div class="row mt-2">
+          <div class="col">
+            <label for="txtCidade">Cidade:</label>
+          </div>
+          <div class="col">
+            <input class="form-control" type="text" id="txtCidade" name="txtCidade" />
+          </div>
+        </div>
+
+        <div class="row mt-2">
+          <div class="col">
+            <label for="txtEstado">Estado:</label>
+          </div>
+          <div class="col">
+            <input class="form-control" type="text" id="txtEstado" name="txtEstado" />
+          </div>
+        </div>
+
+        <div class="row mt-2">
+          <div class="col">
+            <label for="txtNomeMae">Nome da mae:</label>
+          </div>
+          <div class="col">
+            <input class="form-control" type="text" id="txtNomeMae" name="txtNomeMae" />
+          </div>
+        </div>
+
+        <div class="row mt-2">
+          <div class="col">
+            <label for="txtNomePai">Nome do pai:</label>
+          </div>
+          <div class="col">
+            <input class="form-control" type="text" id="txtNomePai" name="txtNomePai" />
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col">
+            <input
+              type="submit"
+              class="btn btn-primary botao"
+              id="operacao"
+              name="operacao"
+              value="SALVAR ALUNO"
+            />
+          </div>
+          <div class="col">
+            <input
+              type="submit"
+              class="btn btn-danger botao"
+              id="operacao"
+              name="operacao"
+              value="EXCLUIR ALUNO"
+            />
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
