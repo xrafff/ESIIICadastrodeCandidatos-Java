@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+	<link rel="stylesheet" href="styles.css" />
+	<meta charset="ISO-8859-1" />
+	<title>:::: Cadastro de Candidatos ::::</title>
+</head>
+
+<body>
+	<div class="topo">
+		<div class="col">
+			<a href="home.html">
+				<img src="imagens/homeicon.png" alt="home" width="80">
+			</a>
+		</div>
+	</div>
+
+	<div class="centro">
+		<form action="/ControleAlunoSalvar" method="post">
+			<legend class="text-center mb-4">Cadastro de Candidatos</legend>
+			<div class="row mt-2">
+				<div class="col">
+					<label for="txtAluno">Nome:</label>
+				</div>
+				<div class="col">
+					<input class="form-control" type="text" id="txtAluno" name="txtAluno" />
+				</div>
+			</div>
+
+			<div class="row mt-2">
+				<div class="col">
+					<label for="txtCPF">CPF:</label>
+				</div>
+				<div class="col">
+					<input class="form-control" type="text" id="txtCPF" name="txtCPF" />
+				</div>
+			</div>
+
+			<div class="row mt-2">
+				<div class="col">
+					<label for="txtLogradouro">Logradouro:</label>
+				</div>
+				<div class="col">
+					<input class="form-control" type="text" id="txtLogradouro" name="txtLogradouro" />
+				</div>
+			</div>
+
+			<div class="row mt-2">
+				<div class="col">
+					<label for="txtNumero">Numero:</label>
+				</div>
+				<div class="col">
+					<input class="form-control" type="text" id="txtNumero" name="txtNumero" />
+				</div>
+			</div>
+
+			<div class="row mt-2">
+				<div class="col">
+					<label for="txtCidade">Cidade:</label>
+				</div>
+				<div class="col">
+					<input class="form-control" type="text" id="txtCidade" name="txtCidade" />
+				</div>
+			</div>
+
+			<div class="row mt-2">
+				<div class="col">
+					<label for="txtEstado">Estado:</label>
+				</div>
+				<div class="col">
+					<input class="form-control" type="text" id="txtEstado" name="txtEstado" />
+				</div>
+			</div>
+
+			<div class="row mt-2">
+				<div class="col">
+					<label for="txtNomeMae">Nome da mae:</label>
+				</div>
+				<div class="col">
+					<input class="form-control" type="text" id="txtNomeMae" name="txtNomeMae" />
+				</div>
+			</div>
+
+			<div class="row mt-2">
+				<div class="col">
+					<label for="txtNomePai">Nome do pai:</label>
+				</div>
+				<div class="col">
+					<input class="form-control" type="text" id="txtNomePai" name="txtNomePai" />
+				</div>
+			</div>
+			<div class="row mt-2">
+				<div class="col">
+					 <label for="cbCursos">Escolha um curso*:</label>
+					<select id="cbCursos">
+					    <option value="">Selecionar Curso</option>
+					    <option value="letras">Letras</option>
+					    <option value="matematica">Matematica</option>
+					    <option value="geografia">Geografia</option>
+					    <option value="ciencias-biologicas">Ciencias Biologicas</option>
+					    <option value="educacao-fisica">Educacao Fisica</option>
+					</select>
+					
+					<script>
+					    const cbCursos = document.getElementById('cbCursos');
+					    const txtCursoMatriculado = document.getElementById('txtCursoMatriculado');
+					
+					    cbCursos.addEventListener('change', function() {
+					        const cursoMatriculado = new CursoMatriculado(cbCursos.value);
+					        txtCursoMatriculado.value = cursoMatriculado.getNome();
+					    });
+					</script>
+				</div>
+				<div class="row mt-2"> 
+					<div class="col">
+						
+							    <label for="cbCursos2">Escolha outro curso (opcional):</label>
+							    <select id="cbCursos2">
+							        <option value="">Selecionar Curso</option>
+							        <option value="letras">Nenhum</option>
+							        <option value="Nenhum">Letras</option>
+							        <option value="matematica">Matematica</option>
+							        <option value="geografia">Geografia</option>
+							        <option value="ciencias-biologicas">Ciencias Biologicas</option>
+							        <option value="educacao-fisica">Educacao Fisica</option>
+							    </select>
+							    
+							    
+							    <script>
+							        const cbCursos2 = document.getElementById('cbCursos2');
+							        const txtCursoMatriculado2 = document.getElementById('txtCursoMatriculado2');
+							    
+							        cbCursos2.addEventListener('change', function() {
+							            const cursoMatriculado2 = new CursoMatriculado(cbCursos2.value);
+							            txtCursoMatriculado2.value = cursoMatriculado2.getNome();
+							        });
+							    </script>
+						</div>
+				</div>
+				</div>
+				<div class="row mt-2">
+	    <div class="col">
+	        <label for="cbCursos3">Escolha outro curso (opcional):</label>
+	        <select id="cbCursos3">
+	            <option value="">Selecionar Curso</option>
+	            <option value="letras">Nenhum</option>
+	            <option value="Nenhum">Letras</option>
+	            <option value="matematica">Matematica</option>
+	            <option value="geografia">Geografia</option>
+	            <option value="ciencias-biologicas">Ciencias Biologicas</option>
+	            <option value="educacao-fisica">Educacao Fisica</option>
+	        </select>
+	        <script>
+	            const cbCursos3 = document.getElementById('cbCursos3');
+	            const txtCursoMatriculado3 = document.getElementById('txtCursoMatriculado3');
+	            cbCursos3.addEventListener('change', function() {
+	                const cursoMatriculado3 = new CursoMatriculado(cbCursos3.value);
+	                txtCursoMatriculado3.value = cursoMatriculado3.getNome();
+	            });
+	        </script>
+	    </div>
+	</div>
+	
+	<div class="row mt-2">
+	    <div class="col">
+	        <label for="txtTelefone1">Telefone*:</label>
+	    </div>
+	    <div class="col">
+	        <input class="form-control" type="text" id="txtTelefone1" name="txtTelefone1" />
+	    </div>
+	</div>
+	
+	<div class="row mt-2">
+	    <div class="col">
+	        <label for="tipoTel1">Tipo do Telefone*:</label>
+	    </div>
+	    <div class="col">
+	        <select id="tipoTel1">
+	            <option value="">Selecione um tipo:</option>
+	            <option value="Residencial">Residencial</option>
+	            <option value="Celular">Celular</option>
+	            <option value="Contato">Contato</option>
+	        </select>
+	        <script>
+	            const txtTelefone1 = document.getElementById('txtTelefone1');
+	            const tipoTel1 = document.getElementById('tipoTel1');
+	            txtTelefone1.addEventListener('input', function() {
+	                const numeroTelefone1 = txtTelefone1.value;
+	                const tipoTelefone1 = tipoTel1.value;
+	                const telefone1 = new Telefone(numeroTelefone1, tipoTelefone1);
+	                console.log(telefone1);
+	            });
+	            tipoTel1.addEventListener('change', function() {
+	                const numeroTelefone1 = txtTelefone1.value;
+	                const tipoTelefone1 = tipoTel1.value;
+	                const telefone1 = new Telefone(numeroTelefone1, tipoTelefone1);
+	                console.log(telefone1);
+	            });
+	        </script>
+	    </div>
+</div>
+
+				<div class="row mt-2">
+				    <div class="col">
+				        <label for="txtTelefone2">Telefone 2:</label>
+				    </div>
+				    <div class="col">
+				        <input class="form-control" type="text" id="txtTelefone2" name="txtTelefone2" />
+				    </div>
+				</div>
+				
+				<div class="row mt-2">
+				    <div class="col">
+				        <label for="tipoTel2">Tipo do Telefone 2 :</label>
+				    </div>
+				    <div class="col">
+				        <select id="tipoTel2">
+				            <option value="">Selecione um tipo:</option>
+				            <option value="Residencial">Residencial</option>
+				            <option value="Celular">Celular</option>
+				            <option value="Contato">Contato</option>
+				        </select>
+				        <script>
+				            const txtTelefone2 = document.getElementById('txtTelefone2');
+				            const tipoTel2 = document.getElementById('tipoTel2');
+				            txtTelefone2.addEventListener('input', function() {
+				                const numeroTelefone2 = txtTelefone2.value;
+				                const tipoTelefone2 = tipoTel2.value;
+				                const telefone2 = new Telefone(numeroTelefone2, tipoTelefone2);
+				                console.log(telefone2);
+				            });
+				            tipoTel2.addEventListener('change', function() {
+				                const numeroTelefone2 = txtTelefone2.value;
+				                const tipoTelefone2 = tipoTel2.value;
+				                const telefone2 = new Telefone(numeroTelefone2, tipoTelefone2);
+				                console.log(telefone2);
+				            });
+				        </script>
+				    </div>
+				</div>
+				
+				<div class="row mt-2">
+				    <div class="col">
+				        <label for="txtTelefone3">Telefone 3 :</label>
+				    </div>
+				    <div class="col">
+				        <input class="form-control" type="text" id="txtTelefone3" name="txtTelefone3" />
+				    </div>
+				</div>
+				
+				<div class="row mt-2">
+				    <div class="col">
+				        <label for="tipoTel3">Tipo do Telefone 3:</label>
+				    </div>
+				    <div class="col">
+				        <select id="tipoTel3">
+				            <option value="">Selecione um tipo:</option>
+				            <option value="Residencial">Residencial</option>
+				            <option value="Celular">Celular</option>
+				            <option value="Contato">Contato</option>
+				        </select>
+				        <script>
+				            const txtTelefone3 = document.getElementById('txtTelefone3');
+				            const tipoTel3 = document.getElementById('tipoTel3');
+				            txtTelefone3.addEventListener('input', function() {
+				                const numeroTelefone3 = txtTelefone3.value;
+				                const tipoTelefone3 = tipoTel3.value;
+				                const telefone3 = new Telefone(numeroTelefone3, tipoTelefone3);
+				                console.log(telefone3);
+				            });
+				            tipoTel3.addEventListener('change', function() {
+				                const numeroTelefone3 = txtTelefone3.value;
+				                const tipoTelefone3 = tipoTel3.value;
+				                const telefone3 = new Telefone(numeroTelefone3, tipoTelefone3);
+				                console.log(telefone3);
+				            });
+				        </script>
+				    </div>
+				</div>
+			<div class="row mt-4">
+				<div class="col">
+					<input type="submit" class="btn btn-primary botao" id="operacao" name="operacao"
+						value="Salvar" />
+				</div>
+				
+			</div>
+		</form>
+	</div>
+</body>
+
+</html>
